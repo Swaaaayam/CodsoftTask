@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles3.css">
+    <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="calc.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#equal").click(function(){
+                $(this).css("transform", "scale(1.25)");
+                var button = $(this); 
+                setTimeout(function() {
+                    button.css("transform", "scale(1.05)"); 
+                }, 200); 
+            });
+        });
+    </script>
+    
+        
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>SIMPLE CALCULATOR</h1><br>
+    <div class="Calculator">
+        <input id="display" readonly>
+        <br>
+        
+        <div class="keys">
+            <button class="button" onclick="ToDisplay('+')" id="operator">+</button>
+            <button class="button" onclick="ToDisplay('7')">7</button>
+            <button class="button" onclick="ToDisplay('8')">8</button>
+            <button class="button" onclick="ToDisplay('9')">9</button>
+            <button class="button" onclick="ToDisplay('-')" id="operator">-</button>
+            <button class="button" onclick="ToDisplay('4')">4</button>
+            <button class="button" onclick="ToDisplay('5')">5</button>
+            <button class="button" onclick="ToDisplay('6')">6</button>
+            <button class="button" onclick="ToDisplay('*')" id="operator">x</button>
+            <button class="button" onclick="ToDisplay('1')">1</button>
+            <button class="button" onclick="ToDisplay('2')">2</button>
+            <button class="button" onclick="ToDisplay('3')">3</button>
+            <button class="button" onclick="ToDisplay('/')" id="operator">/</button> 
+            <button class="button" onclick="ToDisplay('0')">0</button>    
+            <button class="button" onclick="ToDisplay('.')">.</button>  
+            <button class="button" onclick="calculate()"id="equal">=</button>
+            <button class="button" onclick="clearDisplay()"id="operator">C</button>
+        </div>
+    
+
+        
+    </div>
+    <script src="calc.js"></script>
+</body>
+</html>
